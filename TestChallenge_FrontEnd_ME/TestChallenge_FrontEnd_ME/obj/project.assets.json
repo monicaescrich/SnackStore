@@ -12543,11 +12543,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\PROYECTOS\\TEST\\TECHNICALTEST_AS_ME\\TestChallenge_FrontEnd_ME\\TestChallenge_FrontEnd_ME\\TestChallenge_FrontEnd_ME.csproj",
+      "projectUniqueName": "C:\\PROYECTOS\\TEST\\SnackStore\\TestChallenge_FrontEnd_ME\\TestChallenge_FrontEnd_ME\\TestChallenge_FrontEnd_ME.csproj",
       "projectName": "TestChallenge_FrontEnd_ME",
-      "projectPath": "C:\\PROYECTOS\\TEST\\TECHNICALTEST_AS_ME\\TestChallenge_FrontEnd_ME\\TestChallenge_FrontEnd_ME\\TestChallenge_FrontEnd_ME.csproj",
+      "projectPath": "C:\\PROYECTOS\\TEST\\SnackStore\\TestChallenge_FrontEnd_ME\\TestChallenge_FrontEnd_ME\\TestChallenge_FrontEnd_ME.csproj",
       "packagesPath": "C:\\Users\\Monica Escrich\\.nuget\\packages\\",
-      "outputPath": "C:\\PROYECTOS\\TEST\\TECHNICALTEST_AS_ME\\TestChallenge_FrontEnd_ME\\TestChallenge_FrontEnd_ME\\obj\\",
+      "outputPath": "C:\\PROYECTOS\\TEST\\SnackStore\\TestChallenge_FrontEnd_ME\\TestChallenge_FrontEnd_ME\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
