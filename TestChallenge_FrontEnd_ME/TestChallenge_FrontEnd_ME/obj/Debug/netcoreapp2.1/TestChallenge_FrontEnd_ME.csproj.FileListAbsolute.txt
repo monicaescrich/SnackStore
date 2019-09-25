@@ -70,10 +70,10 @@ C:\PROYECTOS\TEST\SnackStore\TestChallenge_FrontEnd_ME\TestChallenge_FrontEnd_ME
 C:\PROYECTOS\TEST\SnackStore\TestChallenge_FrontEnd_ME\TestChallenge_FrontEnd_ME\obj\Debug\netcoreapp2.1\TestChallenge_FrontEnd_ME.TagHelpers.output.cache
 C:\PROYECTOS\TEST\SnackStore\TestChallenge_FrontEnd_ME\TestChallenge_FrontEnd_ME\obj\Debug\netcoreapp2.1\TestChallenge_FrontEnd_ME.RazorCoreGenerate.cache
 C:\PROYECTOS\TEST\SnackStore\TestChallenge_FrontEnd_ME\TestChallenge_FrontEnd_ME\obj\Debug\netcoreapp2.1\Razor\Pages\Index.g.cshtml.cs
-C:\PROYECTOS\TEST\SnackStore\TestChallenge_FrontEnd_ME\TestChallenge_FrontEnd_ME\obj\Debug\netcoreapp2.1\Razor\Pages\Shared\_Layout.g.cshtml.cs
 C:\PROYECTOS\TEST\SnackStore\TestChallenge_FrontEnd_ME\TestChallenge_FrontEnd_ME\obj\Debug\netcoreapp2.1\TestChallenge_FrontEnd_ME.RazorTargetAssemblyInfo.cache
 C:\PROYECTOS\TEST\SnackStore\TestChallenge_FrontEnd_ME\TestChallenge_FrontEnd_ME\obj\Debug\netcoreapp2.1\TestChallenge_FrontEnd_ME.RazorTargetAssemblyInfo.cs
 C:\PROYECTOS\TEST\SnackStore\TestChallenge_FrontEnd_ME\TestChallenge_FrontEnd_ME\obj\Debug\netcoreapp2.1\TestChallenge_FrontEnd_ME.Views.pdb
 C:\PROYECTOS\TEST\SnackStore\TestChallenge_FrontEnd_ME\TestChallenge_FrontEnd_ME\obj\Debug\netcoreapp2.1\TestChallenge_FrontEnd_ME.dll
 C:\PROYECTOS\TEST\SnackStore\TestChallenge_FrontEnd_ME\TestChallenge_FrontEnd_ME\obj\Debug\netcoreapp2.1\TestChallenge_FrontEnd_ME.pdb
 C:\PROYECTOS\TEST\SnackStore\TestChallenge_FrontEnd_ME\TestChallenge_FrontEnd_ME\obj\Debug\netcoreapp2.1\TestChallenge_FrontEnd_ME.csproj.CopyComplete
+C:\PROYECTOS\TEST\SnackStore\TestChallenge_FrontEnd_ME\TestChallenge_FrontEnd_ME\obj\Debug\netcoreapp2.1\Razor\Pages\Products.g.cshtml.cs

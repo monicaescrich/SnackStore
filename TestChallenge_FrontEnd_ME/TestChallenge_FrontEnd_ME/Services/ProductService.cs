@@ -11,12 +11,13 @@ namespace TestChallenge_FrontEnd_ME.Services
 {
     public class ProductService:IProduct
     {
+        string _url= "http://localhost:57289/api/";
         public async Task<IEnumerable<Product>> GetAllProducts()
         {
             IEnumerable<Product> productList;
             using (var httpClient = new HttpClient())
             {
-                using (var response = await httpClient.GetAsync("http://localhost:57289/api/ListAllProducts"))
+                using (var response = await httpClient.GetAsync(_url+"ListAllProducts"))
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();
                     productList = JsonConvert.DeserializeObject<IEnumerable<Product>>(apiResponse);
@@ -35,7 +36,7 @@ namespace TestChallenge_FrontEnd_ME.Services
             IEnumerable<Product> productList;
             using (var httpClient = new HttpClient())
             {
-                using (var response = await httpClient.GetAsync("http://localhost:57289/api/products?limit="+pageSize+"&offset="+currentPage*pageSize))
+                using (var response = await httpClient.GetAsync(_url+"products?limit="+pageSize+"&offset="+currentPage*pageSize))
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();
                     productList = JsonConvert.DeserializeObject<IEnumerable<Product>>(apiResponse);
@@ -44,6 +45,21 @@ namespace TestChallenge_FrontEnd_ME.Services
             return productList;
         }
 
+       public async Task<IEnumerable<Product>> ListProductsByName(int currentPage, string name, int pageSize = 9)
+        {
+            IEnumerable<Product> productList;
+
+            using (var httpClient = new HttpClient())
+            {
+                
+                using (var response = await httpClient.GetAsync(_url+"GetProductByName?limit=" + pageSize + "&offset=" + currentPage * pageSize + "&name=" + name))
+                {
+                    string apiResponse = await response.Content.ReadAsStringAsync();
+                    productList = JsonConvert.DeserializeObject<IEnumerable<Product>>(apiResponse);
+                }
+            }
+            return productList;
+        }
 
     }
 }

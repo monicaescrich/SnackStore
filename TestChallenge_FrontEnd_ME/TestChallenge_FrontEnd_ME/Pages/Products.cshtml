@@ -1,0 +1,110 @@
+﻿@page
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model TestChallenge_FrontEnd_ME.Pages.IndexModel
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SnackStore</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/4.3.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+
+    </environment>
+</head>
+<body>
+    <header>
+        <div class="collapse bg-dark" id="navbarHeader">
+            <div class="container">
+                <form>
+                    <div class="row">
+                        <div class="input-group add-on py-4">
+                            <input class="form-control" placeholder="Search" name="searchstring" id="srch-term" type="text" asp-for="SearchString" asp-route-currentpage="@Model.CurrentPage">
+                            <input class="btn" type="image" src="~/lib/imgs/search.svg" alt="Or Click Me" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="navbar navbar-dark bg-dark box-shadow">
+            <div class="container d-flex justify-content-between">
+                <a href="/Index" class="navbar-brand d-flex align-items-center">
+                    <img src="~/lib/imgs/logo.png" height="65px" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <img width="25px" src="~/lib/imgs/search-navbar.svg" />
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container body-content">
+
+        <div class="album py-5 bg-light">
+            <div class="container">
+
+                <div class="row">
+                    @foreach (var pr in Model.Products)
+                    {
+                        <div class="col-md-4">
+                            <div class="card mb-4 box-shadow">
+                                <img class="card-img-top" data-src="holder.js/100px225?bg=c3d8cc&fg=ffffff&text=Product Image" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-text">@pr.ProductName.Trim()</h4>
+                                    <p class="card-text">@pr.Category.Name.Trim()</p>
+                                    <small class="text-muted">@pr.Likes LIKES</small>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <img class="like" />
+
+                                        </div>
+
+                                        <small class="text-muted">$@Math.Round(pr.UnitPrice, 2)</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <ul class="pagination justify-content-center">
+                    @for (var i = 0; i <= Model.TotalPages; i++)
+                    {
+                        <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+                            <a asp-page="/Index" asp-route-currentpage="@i" class="page-link">@(i+1)</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+        <hr />
+        <footer>
+            <p>&copy; 2019 - Mónica Escrich</p>
+        </footer>
+    </div>
+
+    <environment include="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"
+                asp-fallback-src="~/lib/jquery/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/4.3.1/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity=""></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.6/holder.js"></script>
+
+
+    </environment>
+
+</body>
+</html>

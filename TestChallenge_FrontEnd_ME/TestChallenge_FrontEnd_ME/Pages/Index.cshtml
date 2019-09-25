@@ -1,43 +1,69 @@
 ﻿@page
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-@model TestChallenge_FrontEnd_ME.Pages.IndexModel
-@{
-    Layout = "_Layout";
-}
 
-<div class="album py-5 bg-light">
-    <div class="container">
+<!DOCTYPE html>
 
-        <div class="row">
-            @foreach (var pr in Model.Products)
-            {
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" data-src="holder.js/100px225?bg=c3d8cc&fg=ffffff&text=Product Image" alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-text">@pr.ProductName.Trim()</h4>
-                            <p class="card-text">@pr.Category.Name.Trim()</p>
-                            <small class="text-muted">@pr.Likes LIKES</small>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <img class="like" />
-
-                                </div>
-
-                                <small class="text-muted">$@Math.Round(pr.UnitPrice, 2)</small>
-                            </div>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/css/AboutMe.css" />
+        <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" />
+    </environment>
+    <title>AboutMe</title>
+</head>
+<body>
+    <div class="ct" id="t1">
+        <div class="ct" id="t2">
+            <div class="ct" id="t3">
+                <div class="ct" id="t4">
+                    <div class="ct" id="t5">
+                        <ul id="menu">
+                            <li class="icon fa fa-bolt" id="uno"><a style="color:white" href="#t1">Me</a></li>
+                            <li class="icon fa fa-keyboard-o" id="dos"><a style="color:white" href="#t2">Test</a></li>
+                           
+                        </ul>
+                        <div class="page" id="p1">
+                            <section class="icon fa fa-bolt">
+                                <img src="~/lib/imgs/logo2.png" height="150px" />                              
+                                <span class="hint" style="color:black">Hi! I am Monica, a computer science engineer. I'm really into data, innovate and create solutions for real needs. I find happiness in helping others, getting out of my comfort zone, soccer, mountain biking, basketball and tennis. </span>
+                            </section>
+                        </div>
+                        <div class="page" id="p2">
+                            <section class="icon fa fa-keyboard-o">
+                            <a class="btn" style="border-color:white" href="/Products">Ir a Test</a>
+                                <p class="hint" style="color:black">Net Core web application that consumes web service to show and search products. <br /> Libraries used: Net Core, bootstrap, jquery </p>
+                            </section>
+                        </div>
+                        <div class="page" id="p3">
+                            <section class="icon fa fa-rocket"><span class="title">Rocket</span></section>
+                        </div>
+                        <div class="page" id="p4">
+                            <section class="icon fa fa-dribbble">
+                                <span class="title">Dribbble</span>
+                                <p class="hint">
+                                    <a href="https://dribbble.com/albertohartzet" target="_blank">Im ready to play, <span class="hint line-trough">invite me </span> find me</a>
+                                </p>
+                                <p class="hint">Already invited by <a href="http://www.dribbble.com/mrpeters" target="_blank">Stan Peters</a></p>
+                            </section>
+                        </div>
+                        <div class="page" id="p5">
+                            <section class="icon fa fa-plus-circle">
+                                <span class="title">More</span>
+                                <p class="hint">
+                                    <span>You love one page & CSS only stuff? </span><br />
+                                    <a href="https://codepen.io/hrtzt/details/pgXMYb/" target="_blank">check this pen "Pure CSS One page vertical navigation"</a>
+                                </p>
+                            </section>
                         </div>
                     </div>
                 </div>
-            }
+            </div>
         </div>
-        <ul class="pagination justify-content-center">
-            @for (var i = 1; i <= Model.TotalPages; i++)
-            {
-                <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
-                    <a asp-page="/Index" asp-route-currentpage="@i" class="page-link">@i</a>
-                </li>
-            }
-        </ul>
     </div>
-</div>
+
+
+
+</body>
+</html>
