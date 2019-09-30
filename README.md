@@ -1,6 +1,6 @@
 # SnackStore
 Simple page to show and search products consuming an API Rest service using .net core
-
+API Rest used: https://github.com/monicaescrich/TECHNICALTEST_AS_ME
 
 #Features 
  - Consumes REST API to manage a small snacks store using .net Core.
